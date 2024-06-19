@@ -25,7 +25,7 @@ function getCEP() {
         }
         /// state flag
         const bandeira = document.createElement("img");
-        bandeira.src = `../assets/bandeiras/${data.uf}.png`;
+        bandeira.src = `assets/bandeiras/${data.uf}.png`;
         bandeira.alt = `Bandeira do estado de ${data.uf}`;
         bandeira.style.width = "20px"
         bandeira.style.marginLeft = "5px"
