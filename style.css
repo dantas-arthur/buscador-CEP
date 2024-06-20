@@ -6,7 +6,7 @@
     padding: 0;
 }
 
-/* Body, fonts and other elements */
+/* Body, map, fonts and other elements */
 
 body {
     --color1: #FFF8F0;
@@ -22,7 +22,7 @@ footer {
     background-color: var(--color3);
     width: 100%;
     height: 50px;
-    margin-top:  227px;
+    margin-top: 45px;
     p {
         font-size: 1.2rem;
         text-align: center;
@@ -31,20 +31,41 @@ footer {
 
 /* Form container and it's elements */
 
-.form-container {
-    width: 400px;
-    height: 450px;
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-right: 5%;
+}
+
+#map {
+    width: 500px;
+    height: 550px;
     background: rgba( 255, 255, 255, 0.05 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    box-shadow: 0 0px 5px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 3px );
     -webkit-backdrop-filter: blur( 3px );
-    border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 20px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin: 15% 8%;
+}
+
+.form-container {
+    width: 500px;
+    height: 550px;
+    background: rgba( 255, 255, 255, 0.05 );
+    box-shadow: 0 0px 5px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    border-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin: 10% 0% 8% 40%;
+    margin: 15% 0% 0% 53%;
 }
 
 .title {
@@ -58,10 +79,11 @@ footer {
 
 #cep-data {
     display: none;
-    margin: 10% 0% 0% 25%;
+    margin: 10% 0% 0% 20%;
     p {
         text-align: left;
-        max-width: 220px;
+        font-size: 1.2rem;
+        max-width: 300px;
     }
 }
 
@@ -71,6 +93,8 @@ footer {
     border: 2px solid var(--color3);
     border-radius: 10px;
     margin-top: 20%;
+    text-indent: 10px;
+    font-size: 15px;
 }
 
 button {
