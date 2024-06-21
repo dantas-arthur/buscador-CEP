@@ -1,4 +1,4 @@
-var map = L.map("map", {center: [0, 0], zoom: 13});
+var map = L.map("map", {center: [0, 0], zoom: 15});
 var marker = L.marker([0, 0]).addTo(map);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
