@@ -6,6 +6,7 @@
 
 <h1>Showcase</h1>
 <img src="assets/screenshot/Screenshot_1.png">
+<img src="assets/screenshot/Screenshot_2.png">
 
 ### Acesse clicando [aqui](https://lonelyalphaz.github.io/buscador-CEP/)
 
