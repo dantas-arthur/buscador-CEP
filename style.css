@@ -129,6 +129,7 @@ mark.blue {
 @media screen and (max-width: 610px) {
 
     footer {
+        width: 100%;
         margin: 0;
         p {
             font-size: 1rem;
@@ -152,7 +153,7 @@ mark.blue {
     }
 
     #map, .form-container {
-        width: 170%;
+        width: 150%;
         height: 450px;
         margin: 0;
     }
