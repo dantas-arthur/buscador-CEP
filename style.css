@@ -126,3 +126,61 @@ mark.blue {
     font-weight: bold;
     color: var(--color3);
 }
+
+@media screen and (max-width: 610px) {
+
+    .container {
+        grid-template-columns: 1fr;
+        margin: 10% 5%;
+    }
+
+    .form-container {
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+
+    }
+
+    #map {
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+    }
+
+    #map, .form-container {
+        width: 170%;
+        height: 450px;
+        margin: 0;
+    }
+
+    .logo {
+        width: 90px;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    #help {
+        font-size: 0.7rem;
+    }
+
+    #cep-data {
+        margin: 2% 0% 2% 20%;
+        p {
+            font-size: 1rem;
+            max-width: 187px;
+        }
+    }
+
+    .title {
+        margin-bottom: 1%;
+    }
+
+    .cep-input, button {
+        width: 90%; 
+    }
+    
+    button {
+        width: 80%;
+    }
+
+}
