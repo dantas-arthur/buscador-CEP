@@ -1,5 +1,14 @@
+var map = L.map("map", {center: [0, 0], zoom: 13});
+var marker = L.marker([0, 0]).addTo(map);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
 // API request
 function getCEP() {
+
     // Get hint and cep data HTML elements
     var helpText = document.getElementById("help");
     var cepData = document.getElementById("cep-data");
@@ -22,6 +31,7 @@ function getCEP() {
             window.alert("Erro ao localizar CEP digitado.");
             return;
         }
+
         /// state flag
         const bandeira = document.createElement("img");
         bandeira.src = `assets/bandeiras/${data.uf}.png`;
@@ -44,25 +54,16 @@ function getCEP() {
         cepData.style.display = "block";
 
         // Map latitude and longitude function
+        const cepEncode = encodeURI(data.cep);
         const logradouroEncode = encodeURIComponent(data.logradouro);
-        const bairroEncode = encodeURIComponent(data.bairro);
-        const localEncode = encodeURIComponent(data.localidade);
-        const ufEncode = encodeURIComponent(data.uf);
-        const url = `https://nominatim.openstreetmap.org/search?q=${logradouroEncode}+${bairroEncode}+${localEncode}+${ufEncode}&format=json&polygon=1&addressdetails=1`;
-        console.log(url)
+        const url = `https://nominatim.openstreetmap.org/search?q=${cepEncode}+${logradouroEncode}&format=json&polygon=1&addressdetails=1`;
         fetch(url)
         .then(response => response.json())
         .then(data => {
 
-            // Map with current CEP location
-            var map = L.map('map').setView([data[0].lat, data[0].lon], 13);
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            }).addTo(map);
-            
-            // Map marker
-            var marker = L.marker([data[0].lat, data[0].lon]).addTo(map);
+            // Map and marker with current CEP location
+            map.panTo(new L.LatLng(data[0].lat, data[0].lon));
+            marker.setLatLng([data[0].lat, data[0].lon]).update();
         })
     })
     .catch(error => {

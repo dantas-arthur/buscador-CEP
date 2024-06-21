@@ -68,9 +68,14 @@ footer {
     margin: 15% 0% 0% 53%;
 }
 
+.logo {
+    padding-top: 2%;
+    width: 128px;
+}
+
 .title {
-    padding-top: 10%;
-    margin-bottom: 5%;
+    padding-top: 2%;
+    margin-bottom: 2%;
 }
 
 #help {
@@ -79,7 +84,7 @@ footer {
 
 #cep-data {
     display: none;
-    margin: 10% 0% 0% 20%;
+    margin: 5% 0% 0% 20%;
     p {
         text-align: left;
         font-size: 1.2rem;
@@ -92,7 +97,7 @@ footer {
     height: 7%;
     border: 2px solid var(--color3);
     border-radius: 10px;
-    margin-top: 20%;
+    margin-top: 5%;
     text-indent: 10px;
     font-size: 15px;
 }
@@ -108,10 +113,6 @@ button {
     margin-top: 5%;
     cursor: pointer;
     transition: 0.1s ease-in-out;
-}
-
-button:hover {
-    box-shadow: 0 5px 5px 0 var(--color3);
 }
 
 mark.blue {
