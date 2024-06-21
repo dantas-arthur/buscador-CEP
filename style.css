@@ -19,7 +19,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
     background-color: var(--color3);
     width: 100%;
     height: 50px;
@@ -129,9 +128,16 @@ mark.blue {
 
 @media screen and (max-width: 610px) {
 
+    footer {
+        margin: 0;
+        p {
+            font-size: 1rem;
+        }
+    }
+
     .container {
         grid-template-columns: 1fr;
-        margin: 10% 5%;
+        margin: 15% 5% 15%;
     }
 
     .form-container {
@@ -146,7 +152,7 @@ mark.blue {
     }
 
     #map, .form-container {
-        width: 140%;
+        width: 170%;
         height: 450px;
         margin: 0;
     }
@@ -164,19 +170,18 @@ mark.blue {
     }
 
     #cep-data {
-        margin: 2% 0% 2% 20%;
+        margin: 5% 0% 2% 20%;
         p {
             font-size: 1rem;
             max-width: 187px;
         }
     }
 
-    .title {
-        margin-bottom: 1%;
-    }
-
     .cep-input, button {
-        width: 90%; 
+        width: 90%;
+        p {
+            font-size: 0.7rem;
+        }
     }
     
     button {
