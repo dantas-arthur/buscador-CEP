@@ -61,10 +61,10 @@ function getCEP() {
         .then(response => response.json())
         .then(data => {
 
-            // Map and marker with current CEP location
+            // Map, marker and popup with current CEP location
             map.panTo(new L.LatLng(data[0].lat, data[0].lon));
             marker.setLatLng([data[0].lat, data[0].lon]).update();
-        })
+        });
     })
     .catch(error => {
         window.alert("Erro ao localizar CEP. Tente novamente.")
