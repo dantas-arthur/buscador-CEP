@@ -4,7 +4,7 @@
 </div>
 <p align="center">Site rápido e prático para busca de CEP.</p>
 
-<h1>Showcase</h1>
+<h1>Preview</h1>
 <img src="assets/screenshot/Screenshot_1.png">
 <img src="assets/screenshot/Screenshot_2.png">
 
